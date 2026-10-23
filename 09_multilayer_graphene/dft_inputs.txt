@@ -1,0 +1,17 @@
+geometries/m0_n8_m8_n6_2L_substrate.extxyz
+geometries/m0_n8_m8_n6_2L_system.extxyz
+geometries/m0_n8_m8_n6_3L_substrate.extxyz
+geometries/m0_n8_m8_n6_3L_system.extxyz
+geometries/m-8_n0_m-6_n-8_2L_substrate.extxyz
+geometries/m-8_n0_m-6_n-8_2L_system.extxyz
+geometries/m-8_n0_m-6_n-8_3L_substrate.extxyz
+geometries/m-8_n0_m-6_n-8_3L_system.extxyz
+geometries/m-8_n-1_m-5_n-8_2L_substrate.extxyz
+geometries/m-8_n-1_m-5_n-8_2L_system.extxyz
+geometries/m-8_n-1_m-5_n-8_3L_substrate.extxyz
+geometries/m-8_n-1_m-5_n-8_3L_system.extxyz
+geometries/m-8_n-6_m-5_n3_2L_substrate.extxyz
+geometries/m-8_n-6_m-5_n3_2L_system.extxyz
+geometries/m-8_n-6_m-5_n3_3L_substrate.extxyz
+geometries/m-8_n-6_m-5_n3_3L_system.extxyz
+geometries/m-8_n0_m-6_n-8_1L_system.extxyz

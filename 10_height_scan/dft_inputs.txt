@@ -1,0 +1,13 @@
+geometries/molecule.extxyz
+geometries/scan_dh0.0.extxyz
+geometries/scan_dh0.5.extxyz
+geometries/scan_dh1.0.extxyz
+geometries/scan_dh1.5.extxyz
+geometries/scan_dh2.0.extxyz
+geometries/scan_dh2.5.extxyz
+geometries/scan_dh3.0.extxyz
+geometries/scan_dh4.0.extxyz
+geometries/scan_dh5.0.extxyz
+geometries/scan_dh6.0.extxyz
+geometries/scan_dh8.0.extxyz
+geometries/substrate.extxyz

@@ -1,0 +1,128 @@
+==============================================================================
+E_ads MISSING ENERGY vs CUTOFF -- 26 adsorbate-substrate structures
+==============================================================================
+  structures: 26 systems + 26 substrates + adsorbate (as in file, and non-periodic)
+  radii     : 25 (10.00 .. 31.7502 A), workers 128
+  references: 54 periodic D4 calls in 116s
+  balls     : 246800
+
+--- balls ---
+  246800 balls to run (largest 2628 atoms, mean 696), 128 workers
+  [23:18:31] 2908/246800 balls, checkpoint written; ~7.0 h left (big balls first, so this overestimates)
+  [23:23:31] 6275/246800 balls, checkpoint written; ~6.4 h left (big balls first, so this overestimates)
+  [23:28:31] 10058/246800 balls, checkpoint written; ~5.9 h left (big balls first, so this overestimates)
+  [23:33:31] 14551/246800 balls, checkpoint written; ~5.3 h left (big balls first, so this overestimates)
+  [23:38:31] 20101/246800 balls, checkpoint written; ~4.7 h left (big balls first, so this overestimates)
+  [23:43:31] 27587/246800 balls, checkpoint written; ~4.0 h left (big balls first, so this overestimates)
+  [23:48:32] 41077/246800 balls, checkpoint written; ~2.9 h left (big balls first, so this overestimates)
+  [23:53:32] 58921/246800 balls, checkpoint written; ~2.1 h left (big balls first, so this overestimates)
+  [23:58:32] 89415/246800 balls, checkpoint written; ~1.3 h left (big balls first, so this overestimates)
+  [00:03:32] 196324/246800 balls, checkpoint written; ~0.2 h left (big balls first, so this overestimates)
+  finished 246800 balls in 3018s wall
+
+  wrote eads_tail_vs_R.npz
+
+--- C1 every structure's missing E_ads must reach ~0 at 31.75 A ---
+  |tail(31.75)| max 2.407 meV  vs  |tail(10)| mean 97.743 meV  [PASS]
+
+--- C2 R = 10 must reproduce job 1397668 (d4_tail_slab_summary.txt) ---
+  max |deviation| over 26 structures: 0.0005 meV (Sept. values printed to 3 decimals)  [PASS]
+
+--- the isolated adsorbate term (same for all structures) ---
+     R (A)  as in file (pbc xyz)  non-periodic  difference
+   10.0000               -53.490       -52.679      -0.811
+   10.5000               -46.634       -45.824      -0.811
+   11.0000               -43.423       -42.612      -0.811
+   11.5000               -43.843       -43.032      -0.811
+   12.0000               -40.218       -39.407      -0.811
+   12.5000               -37.327       -36.517      -0.811
+   13.0000               -32.276       -31.465      -0.811
+   13.5000               -26.316       -25.506      -0.811
+   14.0000               -21.139       -20.328      -0.811
+   14.5000               -16.782       -15.971      -0.811
+   15.0000               -13.715       -12.904      -0.811
+   15.5000               -10.351        -9.540      -0.811
+   16.0000                -7.981        -7.170      -0.811
+   17.0000                -6.901        -6.236      -0.665
+   18.0000                -6.056        -4.140      -1.916
+   19.0000               -10.178        -3.721      -6.456
+   20.0000               -18.486        -2.332     -16.154
+   21.0000               -20.207        -0.557     -19.650
+   21.1668               -20.373        -0.470     -19.903
+   22.0000               -18.586        -0.144     -18.442
+   24.0000               -11.171         0.000     -11.171
+   26.0000                -5.680         0.000      -5.680
+   28.0000                -4.583         0.000      -4.583
+   30.0000                -5.757         0.000      -5.757
+   31.7502                -6.023         0.000      -6.023
+
+--- missing E_ads vs cutoff, and whether the ranking changes ---
+     R (A)      mean      sd  max-min  swapped  at risk
+   10.0000   -97.743   0.378    1.694        0        1
+   10.5000   -77.895   0.896    2.466        1        4
+   11.0000   -62.724   0.533    1.895        1        1
+   11.5000   -49.022   0.437    1.581        1        2
+   12.0000   -40.796   0.292    1.154        1        1
+   12.5000   -32.549   0.381    1.286        1        2
+   13.0000   -27.355   0.329    1.056        1        1
+   13.5000   -25.721   0.262    0.956        0        0
+   14.0000   -27.364   0.227    0.910        1        1
+   14.5000   -24.743   0.300    0.916        0        0
+   15.0000   -24.086   0.113    0.464        0        0
+   15.5000   -23.104   0.102    0.384        0        0
+   16.0000   -23.254   0.092    0.469        0        0
+   17.0000   -18.028   0.113    0.629        0        0
+   18.0000   -15.665   0.147    0.595        0        0
+   19.0000    -8.118   0.188    0.750        0        0
+   20.0000     2.852   0.163    0.565        0        0
+   21.0000     6.823   0.133    0.586        0        0
+   21.1668     7.169   0.148    0.618        0        0
+   22.0000     6.118   0.128    0.517        0        0
+   24.0000     0.177   0.145    0.604        0        0
+   26.0000    -4.132   0.178    0.698        0        0
+   28.0000    -4.609   0.132    0.541        0        0
+   30.0000    -2.825   0.182    0.699        0        0
+   31.7502    -2.239   0.188    0.743        0        0
+  (325 pairs; 'swapped' = order differs from DFT; 'at risk' = DFT gap smaller than the pair's tail difference)
+  SWAP at R=10.50: m-1_n7_m-8_n-3 vs m-4_n5_m6_n8, DFT gap -0.364, tail difference -1.502 meV
+  SWAP at R=11.00: m-1_n7_m-8_n-3 vs m-4_n5_m6_n8, DFT gap -0.364, tail difference -0.563 meV
+  SWAP at R=11.50: m-1_n7_m-8_n-3 vs m-4_n5_m6_n8, DFT gap -0.364, tail difference -0.882 meV
+  SWAP at R=12.00: m-1_n7_m-8_n-3 vs m-4_n5_m6_n8, DFT gap -0.364, tail difference -0.495 meV
+  SWAP at R=12.50: m-1_n7_m-8_n-3 vs m-4_n5_m6_n8, DFT gap -0.364, tail difference -0.732 meV
+  SWAP at R=13.00: m-1_n7_m-8_n-3 vs m-4_n5_m6_n8, DFT gap -0.364, tail difference -0.586 meV
+  SWAP at R=14.00: m-1_n7_m-8_n-3 vs m-4_n5_m6_n8, DFT gap -0.364, tail difference -0.458 meV
+
+--- per structure (meV), ordered by DFT E_ads ---
+  structure             E_ads DFT      R=10      R=12      R=15      R=20      R=24
+  m-8_n0_m-6_n-8          -6394.3   -97.508   -40.570   -24.033     2.683     0.059
+  m8_n0_m6_n8             -6393.9   -97.780   -40.617   -24.058     2.689     0.060
+  m-8_n0_m2_n8            -6392.9   -97.689   -40.670   -24.065     2.689     0.071
+  m0_n-8_m-8_n-6          -6392.7   -97.665   -40.594   -24.079     2.670     0.049
+  m8_n0_m-2_n-8           -6391.1   -97.754   -40.677   -24.036     2.694     0.080
+  m0_n-8_m8_n2            -6384.2   -97.289   -40.527   -24.059     2.649     0.051
+  m8_n8_m6_n-2            -6383.7   -97.500   -40.534   -24.022     2.676     0.078
+  m-8_n-8_m2_n-6          -6380.2   -97.284   -40.554   -24.077     2.658     0.064
+  m-8_n-8_m-6_n2          -6379.6   -97.326   -40.628   -24.056     2.683     0.081
+  m0_n8_m8_n6             -6378.4   -97.234   -40.560   -24.045     2.686     0.084
+  m-7_n1_m3_n8            -6357.2   -97.792   -41.190   -24.102     2.985     0.205
+  m4_n-5_m-6_n-8          -6350.3   -97.504   -40.450   -23.933     2.837     0.164
+  m5_n-4_m8_n6            -6349.8   -97.433   -40.404   -23.957     2.829     0.152
+  m-1_n7_m-8_n-3          -6344.9   -97.830   -41.013   -24.066     3.001     0.226
+  m-4_n5_m6_n8            -6344.5   -97.796   -40.518   -23.923     2.847     0.164
+  m7_n-1_m-3_n-8          -6343.2   -97.867   -41.102   -24.114     2.967     0.238
+  m-5_n4_m-8_n-6          -6340.1   -97.559   -40.669   -23.953     2.825     0.158
+  m-7_n-8_m3_n-5          -6339.5   -97.678   -41.021   -24.068     3.005     0.219
+  m7_n8_m-3_n5            -6335.6   -97.631   -40.941   -24.054     2.991     0.203
+  m-8_n-7_m-5_n3          -6331.8   -97.954   -41.047   -24.137     2.978     0.249
+  m-1_n-8_m-8_n-5         -6331.1   -97.784   -41.012   -24.102     2.997     0.234
+  m1_n8_m8_n5             -6331.0   -97.972   -41.076   -24.086     2.975     0.235
+  m1_n-7_m8_n3            -6322.8   -98.107   -41.140   -24.207     2.964     0.183
+  m-8_n-1_m-5_n-8         -6304.6   -98.928   -41.558   -24.387     2.843     0.089
+  m-8_n-6_m-5_n3          -4891.3   -97.859   -40.635   -24.225     3.214     0.652
+  m2_n8_m8_n5             -4876.3   -98.584   -41.001   -24.386     3.112     0.559
+
+  wrote eads_tail_vs_R.csv
+  wrote eads_tail_vs_R.png
+  wrote eads_tail_spread_vs_R.png
+
+total wall time 3143s

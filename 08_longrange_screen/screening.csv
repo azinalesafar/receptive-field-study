@@ -1,0 +1,16 @@
+name,kind,atoms,mol_atoms,eads_d3_full,eads_d3_10A,tail_beyond_10A,tail_pct,height_span
+A_small_1layer,multilayer,84,12,-0.4618,-0.4548,-0.0069,1.5,4.5
+A_small_2layer,multilayer,156,12,-0.4939,-0.4804,-0.0134,2.7,7.9
+A_small_3layer,multilayer,228,12,-0.4998,-0.4806,-0.0192,3.8,11.2
+B_small_stacked,second layer,96,12,-0.241,-0.2336,-0.0075,3.1,7.9
+A_medium_1layer,multilayer,102,30,-1.0968,-1.0767,-0.0201,1.8,5.4
+A_medium_2layer,multilayer,174,30,-1.1753,-1.138,-0.0373,3.2,8.8
+A_medium_3layer,multilayer,246,30,-1.1902,-1.1379,-0.0523,4.4,12.1
+B_medium_stacked,second layer,132,30,-0.8773,-0.8527,-0.0246,2.8,8.8
+A_large_1layer,multilayer,121,49,-0.9732,-0.9403,-0.0329,3.4,7.9
+A_large_2layer,multilayer,193,49,-1.0525,-0.9937,-0.0588,5.6,11.3
+A_large_3layer,multilayer,265,49,-1.0689,-0.994,-0.0749,7.0,14.6
+B_large_stacked,second layer,170,49,-1.7762,-1.7355,-0.0407,2.3,11.3
+C_upright_C8,upright,100,28,-0.2238,-0.2125,-0.0113,5.0,14.2
+C_upright_C12,upright,112,40,-0.2251,-0.2125,-0.0126,5.6,19.3
+C_upright_C16,upright,124,52,-0.226,-0.2125,-0.0135,6.0,24.3
