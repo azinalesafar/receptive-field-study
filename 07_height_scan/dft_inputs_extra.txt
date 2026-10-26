@@ -1,0 +1,10 @@
+geometries/scan_dh-0.3.extxyz
+geometries/scan_dh-0.2.extxyz
+geometries/scan_dh-0.1.extxyz
+geometries/scan_dh0.1.extxyz
+geometries/scan_dh0.2.extxyz
+geometries/scan_dh0.3.extxyz
+geometries/scan_dh3.5.extxyz
+geometries/scan_dh4.5.extxyz
+geometries/scan_dh7.0.extxyz
+geometries/scan_dh9.0.extxyz

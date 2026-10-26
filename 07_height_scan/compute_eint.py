@@ -31,7 +31,7 @@ def E(p):
 
 
 def main():
-    shifts = sorted(float(re.search(r"dh([\d.]+)\.extxyz", f).group(1))
+    shifts = sorted(float(re.search(r"dh(-?[\d.]+)\.extxyz", f).group(1))
                     for f in glob.glob(os.path.join(HERE, "geometries", "scan_dh*.extxyz")))
     dmin = {}
     for dh in shifts:

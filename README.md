@@ -43,7 +43,7 @@ Each folder contains the scripts, the Slurm job file, and the results (summary, 
 
 | # | Folder | Result | Conclusion |
 |---|---|---|---|
-| 7 | `07_height_scan` | Molecule lifted rigidly off the graphene: beyond a 5 Å gap the learned model gives exactly zero interaction, while post-hoc D4 keeps an attractive tail (−229 meV at 5.3 Å, −21 meV at 10.3 Å). DFT reference pending. | The receptive field matters only away from the adsorbed geometry |
+| 7 | `07_height_scan` | Molecule lifted rigidly off the graphene (21 heights, DFT at every point): beyond a 5 Å gap the learned model gives exactly zero interaction, while post-hoc D4 keeps an attractive tail (−229 meV at 5.3 Å, −17 meV at 11.3 Å) that equals the D4 part of DFT exactly. At the minimum both models agree with DFT to 0.1 eV (adsorption-energy reference). The full DFT curve has an additional slow tail from charge transfer, a consequence of modelling the 4+ porphyrin as neutral (see the folder README). | The receptive field matters only away from the adsorbed geometry |
 
 ## Caveats
 

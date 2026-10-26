@@ -13,8 +13,9 @@
 # DFT single points (GPAW PW500/PBE/k221 + D4, pbc T T F, 37 A box) for the height scan:
 # 11 lifted systems, the substrate and the frozen molecule alone (dft_inputs.txt).
 # Same calculator script as ../multilayer_test.
+# Extra lifts: sbatch --array=0-9 --export=ALL,LIST=dft_inputs_extra.txt job_dft.slurm
 module load gpaw/25.7.0
 export OMP_NUM_THREADS=1
-IN=$(sed -n "$((SLURM_ARRAY_TASK_ID + 1))p" dft_inputs.txt)
+IN=$(sed -n "$((SLURM_ARRAY_TASK_ID + 1))p" ${LIST:-dft_inputs.txt})
 echo "task $SLURM_ARRAY_TASK_ID: $IN on $(hostname)"
 srun gpaw python ../multilayer_test/dft_calc.py sp "$IN" dft

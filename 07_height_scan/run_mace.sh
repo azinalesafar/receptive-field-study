@@ -11,7 +11,7 @@ M11=/scratch/johnt447/azin/SPICE_MACE/model11_adsorption_dft_activelearning/mode
 M11N=/scratch/johnt447/azin/SPICE_MACE/model11_no_d4/model11_no_d4_stagetwo.model
 for spec in "m11_d4trained $M11 none" "m11nod4 $M11N none" "m11nod4_d4 $M11N d4"; do
     set -- $spec
-    for f in $(cat dft_inputs.txt); do
+    for f in $(cat dft_inputs.txt dft_inputs_extra.txt); do
         b=$(basename "$f" .extxyz)
         [ -f "mace/$1/$b.extxyz" ] && continue
         python3 -u $RELAX "$f" --name "$b" --outdir "mace/$1" --model "$2" --dispersion "$3" --mode sp \
