@@ -4,9 +4,9 @@ graphene, model11 family vs DFT PBE+D4). Same data as
 ../dispersion_inference/eads_parity_s18_style_m11_all[_inset].png; only the presentation differs:
 title, axis label, legend names, no grid, inset without its title.
 
-Writes, in this folder, PDF (vector) and PNG (300 dpi):
-  adsorption_energy_parity.{pdf,png}         without the zoomed-in section
-  adsorption_energy_parity_zoom.{pdf,png}    with the zoomed-in small-molecule section
+Writes, in this folder, PNG (300 dpi):
+  adsorption_energy_parity.png         without the zoomed-in section
+  adsorption_energy_parity_zoom.png    with the zoomed-in small-molecule section
 
 Run: module load gpaw/25.7.0; source /scratch/johnt447/azin/SPICE_MACE/mace_env_cpu_disp/bin/activate
      python3 plot_paper_parity.py
@@ -64,10 +64,8 @@ def make(zoom):
     ax.text(-6.85, -6.55, "DFT = model", rotation=45, color=MUTED, fontsize=8, va="bottom")
     for v, name, colour, marker in SERIES:
         y = np.array([e[v][l] for l in labels])
-        err = np.abs(y - x)
         ax.scatter(x, y, s=40, marker=marker, color=colour, edgecolor=SURFACE, linewidth=0.9,
-                   alpha=0.9, zorder=3,
-                   label=f"{name}\nMAE {err[is_cell].mean():.2f} eV (cells), {err[~is_cell].mean():.2f} eV (small molecules)")
+                   alpha=0.9, zorder=3, label=name)
     ax.set_xlim(lim)
     ax.set_ylim(lim)
     ax.set_aspect("equal")
@@ -102,10 +100,9 @@ def make(zoom):
 
     fig.tight_layout()
     base = os.path.join(HERE, "adsorption_energy_parity" + ("_zoom" if zoom else ""))
-    for ext in ("pdf", "png"):
-        fig.savefig(f"{base}.{ext}", dpi=300, facecolor=SURFACE)
+    fig.savefig(f"{base}.png", dpi=300, facecolor=SURFACE)
     plt.close(fig)
-    print(f"saved {base}.pdf/.png")
+    print(f"saved {base}.png")
 
 
 if __name__ == "__main__":
