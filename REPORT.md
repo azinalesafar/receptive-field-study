@@ -1,4 +1,4 @@
-# Does dispersion beyond the MACE receptive field matter for porphyrin on graphene?
+# Does dispersion beyond the MACE receptive field matter for porphyrin (and/or another organic adsorbate) on graphene?
 
 *Report on the calculations done for the long-range-dispersion question.*
 
