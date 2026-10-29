@@ -87,7 +87,7 @@ As agreed in the meeting, this still had to be confirmed on structures *relaxed*
 
 ### Figure 4 - Adsorption energies, three models against DFT
 
-**What it measures.** Each of the three models relaxed all 26 candidate cells from the DFT starting structures with the DFT protocol (graphene fixed, bare graphene single point, isolated molecule relaxed), and its adsorption energy is plotted against the DFT value. The same was done for 57 small C/H/N molecules on graphene from the foundation-model data (inset), as an independent set of adsorbates. The diagonal is perfect agreement; the legend gives the mean absolute error (MAE).
+**What it measures.** Each of the three models relaxed all 26 candidate cells from the DFT starting structures with the DFT protocol (graphene fixed, bare graphene single point, isolated molecule relaxed), and its adsorption energy is plotted against the DFT value. The same was done for 57 small C/H/N molecules on graphene from the foundation-model data (inset), as an independent set of adsorbates. The diagonal is perfect agreement.
 
 ![Adsorption-energy parity](03_porphyrin_eads_learned_vs_posthoc/paper_figures/adsorption_energy_parity_zoom.png)
 
